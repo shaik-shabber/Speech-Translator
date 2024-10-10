@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.speech-to-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff0080, #ff8c00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.language-selectors {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+button.animate-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.animate-button:hover {
+    background-color: #45a049;
+}
+
+button.animate-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.transcript-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.transcript-box, .translated-box {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.transcript-box h3, .translated-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #ff0080, #ff8c00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.transcript-box p, .translated-box p {
+    color: white;
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.speak-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.speak-button:hover {
+    background-color: #45a049;
+}
+
+.speak-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.back-button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ff1a1a;
+}
+
+.back-button:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .transcript-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .transcript-box, .translated-box {
+        width: 100%;
+        height: 200px;
+    }
+}
