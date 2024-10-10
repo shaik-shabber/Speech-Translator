@@ -20,7 +20,7 @@ The Speech Translator web application is designed to facilitate seamless communi
 
 1. Download the Project:
     * Clone the repository using the following command
-        * git clone https://github.com/yourusername/speech-translator.git
+        * git clone: git clone https://github.com/shaik-shabber/Speech-Translator.git
     * Navigate into the project directory:
         * cd speech-translator
 2. Install Dependencies:
